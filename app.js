@@ -14,7 +14,7 @@ app.get("/",function(req,res){
 	res.render("home.ejs");
 })
 app.get("/thushar",function(req,res){
-	res.send("This is my new route hope you like it!!");
+	res.send("this is my new route hope yu like it!!");
 })
 app.post("/addOrder",function(req,res){
 	var neworder = req.body.newOrder;
