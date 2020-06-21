@@ -1,0 +1,14 @@
+<%- include("partials/header")%>
+<h1>These are our past orders</h1>
+
+<% register.forEach(function(order){ %>
+<li>order - <%= order.item %>  || customer - <strong><%= order.customer %></strong></li>
+<% }) %>
+
+<p>Please enter the order you want to add</p>
+<form action="/addOrder" method="POST">
+	<input type="text" name="newOrder" placeholder="Enter the order">
+	<input type="text" name="newCustomer" placeholder="Enter the customer name">
+	<button>add</button>
+</form>
+<%- include("partials/footer")%>
