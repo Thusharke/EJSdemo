@@ -11,13 +11,11 @@ var order =[
 	];
 app.use(express.static("public"));
 app.get("/",function(req,res){
-	
-	
-	
-	
 	res.render("home.ejs");
 })
-
+app.get("/thushar",function(req,res){
+	res.send("This is my new route hope you like it!!");
+})
 app.post("/addOrder",function(req,res){
 	var neworder = req.body.newOrder;
 	var newcustomer = req.body.newCustomer;
